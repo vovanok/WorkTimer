@@ -1,0 +1,22 @@
+﻿<Window x:Class="WorkTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkTimer"
+        mc:Ignorable="d"
+        Title="WorkTimer" Height="99.178" Width="129.093" SizeToContent="WidthAndHeight" MinWidth="130" MinHeight="100" MaxWidth="130" MaxHeight="100" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbHours" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="40" FontSize="24" KeyDown="tb_KeyDown"/>
+        <TextBox x:Name="tbMinutes" HorizontalAlignment="Left" Height="40" Margin="40,0,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="40" FontSize="24" KeyDown="tb_KeyDown"/>
+        <TextBox x:Name="tbSeconds" HorizontalAlignment="Left" Height="40" Margin="80,0,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="40" FontSize="24" Grid.ColumnSpan="2" KeyDown="tb_KeyDown"/>
+
+        <Button x:Name="btnStart" Content="Start" Margin="0,40,0,0" Width="40" Height="22" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnStart_Click"/>
+        <Button x:Name="btnStop" Content="Stop" Margin="40,40,0,0" VerticalAlignment="Top" Width="40" Height="22" HorizontalAlignment="Left" Click="btnStop_Click"/>
+        <Button x:Name="btnClear" Content="Clear" Margin="80,40,0,0" Width="40" Height="22" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="btnClear_Click"/>
+    </Grid>
+</Window>
